@@ -27,6 +27,31 @@ _Join the [Discord server](https://discord.gg/nqKRkyq2UU)!_
 6. Restart the bot, select the desired jobs to perform, then click the `Start` button.
 7. Enjoy the benefits of always-on farming with the py-clash-bot taking care of the heavy lifting for you.
 
+### Optional KataCR detection
+
+The project ships with an experimental wrapper around the
+[KataCR](https://github.com/wty-yy/KataCR) object-detection model. To
+use it you must clone the KataCR repository alongside the bot and ensure
+it is importable as `katacr`.
+
+```bash
+git clone https://github.com/wty-yy/KataCR
+```
+
+With the dependency available you can instantiate
+`pyclashbot.detection.KataCRDetector` to run YOLO-based detection in
+place of the traditional template matching utilities.
+
+### Build from source
+
+To create a distributable wheel and source tarball run:
+
+```bash
+uv build
+```
+
+The resulting artifacts will be placed in the `dist/` directory.
+
 ## Demo
 
 <img src="https://github.com/pyclashbot/py-clash-bot/blob/master/assets/demo-game.gif?raw=true" width="50%" alt="Game Demo"/><img src="https://github.com/pyclashbot/py-clash-bot/blob/master/assets/demo-gui.gif?raw=true" width="50%" alt="GUI Demo"/>
